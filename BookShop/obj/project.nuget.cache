@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZQ1i4bP8AwCY3+sBir5dISHhNIMo+MbFCzr3eUtBRKMAAqvTw/FhgPW2baCPeDt8s/VUxjfEo9W3Gs8e/pIjCw==",
+  "success": true,
+  "projectFilePath": "D:\\20201\\asp\\ProjectsSource\\BookShop\\BookShop\\BookShop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\murad\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+  ],
+  "logs": []
+}

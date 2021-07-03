@@ -1,0 +1,33 @@
+﻿@model List<Book>
+
+<h1>All the Books</h1>
+<a asp-action="Create" class="btn btn-outline-primary m-2 " >Create New BOOK</a>
+<div class="row flex-wrap" >
+    @if (Model is null || Model.Count == 0)
+    {
+        <h4>There is No Books Now</h4>
+    }
+    else
+    {
+        foreach (Book b in Model)
+        {
+            <div class="card border-primary m-3" style="max-width: 20rem;">
+                <div class="card-header">@b.Gener</div>
+                <div class="card-body">
+                    <h4 class="card-title">@b.Title</h4>
+                    <ul>
+                        <li>@b.Author</li>
+                        <li>@b.Lang</li>
+                        <li>@b.Price.ToString("c")</li>
+                    </ul>
+                    <div>
+                        <a asp-action="Delete" asp-route-id="@b.BookId" class="btn btn-danger">Delete</a>
+                        <a asp-action="Edit" asp-route-id="@b.BookId" class="btn btn-info">Edit</a>
+                        <a asp-action="Details" asp-route-id="@b.BookId" class="btn btn-success">Details</a>
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+</div>

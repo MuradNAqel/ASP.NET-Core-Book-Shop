@@ -1,0 +1,59 @@
+﻿@model Book
+
+<hr />
+<h1 class="bg-primary">Delete Book</h1>
+<hr />
+
+
+
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" readonly />
+    </div>
+
+    <div class="form-groupl">
+        <label asp-for="Author"></label>
+        <input asp-for="Author" class="form-control" readonly/>
+    </div>
+
+    <div class="form-groupl">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" readonly />
+    </div>
+
+    <div class="form-groupl">
+        <label asp-for="State"></label>
+        <select asp-for="State" asp-items="@Html.GetEnumSelectList<BookCondition>()" class="form-control" disabled></select>
+    </div>
+
+    <div class="form-groupl">
+        <label asp-for="Publisher"></label>
+        <input asp-for="Publisher" class="form-control" readonly />
+    </div>
+
+    <div class="form-groupl">
+        <label asp-for="Lang"></label>
+        <select asp-for="Lang" asp-items="@Html.GetEnumSelectList<Language>()" class="form-control" disabled></select>
+    </div>
+
+
+    <div class="form-groupl">
+        <label asp-for="PublishDate"></label>
+        <input asp-for="PublishDate" class="form-control" readonly />
+    </div>
+
+
+
+    <div class="form-group">
+        <label asp-for="Gener"></label>
+        <select asp-for="Gener" asp-items="@Html.GetEnumSelectList<CategoryType>()"  class="form-control" disabled ></select>
+    </div>
+
+
+
+<a asp-action="DeleteConf" asp-route-id="@Model.BookId" class="btn btn-danger">Delete</a>
+<a asp-action="Index" class="btn btn-secondary" >Cancel</a>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial">
+}
